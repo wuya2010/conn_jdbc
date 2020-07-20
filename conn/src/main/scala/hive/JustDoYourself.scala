@@ -1,4 +1,4 @@
-package com.atguigu
+package hive
 
 import org.apache.spark.sql.SparkSession
 

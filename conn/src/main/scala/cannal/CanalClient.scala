@@ -1,22 +1,21 @@
-package com.atguigu.canal
+package cannal
 
 import java.net.{InetSocketAddress, SocketAddress}
 import java.util
-
 import com.alibaba.otter.canal.client.{CanalConnector, CanalConnectors}
 import com.alibaba.otter.canal.protocol.CanalEntry.{EntryType, RowChange}
 import com.alibaba.otter.canal.protocol.{CanalEntry, Message}
-import com.atguigu.canal.utils.CanalHandler
 import com.google.protobuf.ByteString
 
 /**
-  * Author lzc
-  * Date 2019-10-09 16:38
-  */
+ *@author kylinWang
+ *@comment： 7-19
+*/
+
 object  CanalClient {
     def main(args: Array[String]): Unit = {
         // 1. 建立连接
-        val address: SocketAddress = new InetSocketAddress("hadoop201", 11111)
+        val address: SocketAddress = new InetSocketAddress("hadoop105", 11111)
         val conn: CanalConnector = CanalConnectors.newSingleConnector(address, "example", "", "")
         conn.connect() // 连接到canal
         conn.subscribe("gmall.*") // 订阅要读取的数据的表

@@ -1,15 +1,16 @@
-package com.atguigu.gmall0508.common.util
+package Es
 
 import io.searchbox.client.config.HttpClientConfig
 import io.searchbox.client.{JestClient, JestClientFactory}
 import io.searchbox.core.{Bulk, Index}
 
 /**
-  * Author lzc
-  * Date 2019-10-11 15:06
+  * @author kylinWang
+  * @data 2020/7/18 8:15
+  *
   */
 object ESUtil {
-    val esUrl = "http://hadoop201:9200"
+    val esUrl = "http://hadoop105:9200"
     // 1. 创建es的客户端工厂
     val factory = new JestClientFactory
     val config: HttpClientConfig = new HttpClientConfig.Builder(esUrl)

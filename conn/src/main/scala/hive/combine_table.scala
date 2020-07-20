@@ -14,14 +14,14 @@ object combine_table {
       .master("local[*]")
       .appName("Hive")
       .enableHiveSupport()  // 支持hive
-      .config("spark.sql.warehouse.dir", "hdfs://hadoop102:9000/user/hive/warehouse")
+      .config("spark.sql.warehouse.dir", "hdfs://hadoop105:9000/user/hive/warehouse")
       .getOrCreate()
 
     import spark.implicits._
 
 
 
-    val df  = spark.read.json("hdfs://hadoop102:9000/user/atguigu/ods/member.log")
+    val df  = spark.read.json("hdfs://hadoop105000/user/atguigu/ods/member.log")
 
 
     //  spark.sql("show tables").show
@@ -67,9 +67,5 @@ object combine_table {
   }
 }
 
-case class member(ad_id  :String, birthday :String, dn :String,
-                        dt :String,email :String,fullname:String,iconurl :String,
-                        lastlogin:String,mailaddr:String,memberlevel:String,password:String,
-                        paymoney:String,phone:String,qq:String,register:String,regupdatetime:String,
-                        uid:String,unitname:String,userip:String,zipcode:String)
+
 

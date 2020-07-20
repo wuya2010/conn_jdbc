@@ -3,7 +3,7 @@
 <configuration>
     <property>
         <name>javax.jdo.option.ConnectionURL</name>
-        <value>jdbc:mysql://hadoop102:3306/metastore?createDatabaseIfNotExist=true</value>
+        <value>jdbc:mysql://hadoop105:3306/metastore?createDatabaseIfNotExist=true</value>
         <description>JDBC connect string for a JDBC metastore</description>
     </property>
 
@@ -27,7 +27,7 @@
     <!-- zookeeper 地址-->
     <property>
         <name>hive.zookeeper.quorum</name>
-        <value>hadoop102,hadoop103,hadoop104</value>
+        <value>hadoop105,hadoop106,hadoop107</value>
         <description>The list of ZooKeeper servers to talk to. This is only needed for read/write locks.</description>
     </property>
     <!-- zookeeper 端口号 -->
