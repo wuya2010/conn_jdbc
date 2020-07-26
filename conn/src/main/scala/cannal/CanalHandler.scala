@@ -17,7 +17,8 @@ object CanalHandler {
 //                // 写入到kafja
 ////                println(jsonObj.toJSONString)
 //                MyKafkaSenderUtil.send(ConstantUtil.ORDER_TOPIC, jsonObj.toJSONString)
-            }
-        }
-    }
+//            }
+//        }
+//    }
+  null
 }

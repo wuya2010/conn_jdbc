@@ -31,7 +31,7 @@ object  CanalClient {
                         val storeValue: ByteString = entry.getStoreValue
                         val rowChange: RowChange = RowChange.parseFrom(storeValue)
                         val rowDataList: util.List[CanalEntry.RowData] = rowChange.getRowDatasList
-                        CanalHandler.handler(entry.getHeader.getTableName, rowDataList, rowChange.getEventType)
+//                        CanalHandler.handler(entry.getHeader.getTableName, rowDataList, rowChange.getEventType)
                     }
                 }
             }else{
